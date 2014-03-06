@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[笑笑她爹的地盘]]></title>
+  <link href="http://wfqr0001.github.io/atom.xml" rel="self"/>
+  <link href="http://wfqr0001.github.io/"/>
+  <updated>2014-03-06T11:02:03+08:00</updated>
+  <id>http://wfqr0001.github.io/</id>
+  <author>
+    <name><![CDATA[笑笑她爹]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[金鹰第四天]]></title>
+    <link href="http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian/"/>
+    <updated>2014-03-06T10:09:02+08:00</updated>
+    <id>http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian</id>
+    <content type="html"><![CDATA[<p>来金鹰第四天，感觉一天天变好</p>
+]]></content>
+  </entry>
+  
+</feed>

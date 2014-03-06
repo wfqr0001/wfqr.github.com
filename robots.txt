@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://wfqr0001.github.io/sitemap.xml 
