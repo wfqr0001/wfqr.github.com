@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-<<<<<<< HEAD
   <title><![CDATA[笑笑她爹的旮旯]]></title>
-  <link href="http://wfqr.github.io/atom.xml" rel="self"/>
-  <link href="http://wfqr.github.io/"/>
-  <updated>2014-07-08T08:14:24+08:00</updated>
-  <id>http://wfqr.github.io/</id>
-=======
-  <title><![CDATA[笑笑她爹的地盘]]></title>
   <link href="http://wfqr0001.github.io/atom.xml" rel="self"/>
   <link href="http://wfqr0001.github.io/"/>
-  <updated>2014-03-06T11:08:14+08:00</updated>
+  <updated>2014-07-08T09:17:44+08:00</updated>
   <id>http://wfqr0001.github.io/</id>
->>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef
   <author>
     <name><![CDATA[笑笑她爹]]></name>
     
@@ -22,11 +14,10 @@
 
   
   <entry>
-<<<<<<< HEAD
     <title type="html"><![CDATA[UIWebView 禁用长按]]></title>
-    <link href="http://wfqr.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an/"/>
     <updated>2014-07-07T13:33:01+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an</id>
+    <id>http://wfqr0001.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an</id>
     <content type="html"><![CDATA[<p>在webViewDidFinishLoad:方法中添加以下代码</p>
 
 <ul>
@@ -45,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[app通信]]></title>
-    <link href="http://wfqr.github.io/blog/2014/05/19/apptong-xin/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/05/19/apptong-xin/"/>
     <updated>2014-05-19T15:00:35+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/05/19/apptong-xin</id>
+    <id>http://wfqr0001.github.io/blog/2014/05/19/apptong-xin</id>
     <content type="html"><![CDATA[<p>[转]
 受限与iOS系统的运行机制，绝大多数情况下一个应用在进入后台后会马上进入suspend或terminate状态，也就是说不能执行代码，iOS中也没有类似WIndows中Service的概念，但存在某些例外：
 1：有某些重要的任务，例如保存用户数据，网络下载等，可以申请一段时间的background运行时间，但时间段内能进行的操作比较有限，且有时间限制，长度为600秒左右。
@@ -67,7 +58,7 @@
 <!--more-->
 
 
-<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr.github.io/images/myImage/4.png' width='' height='' title=''><span class='caption-text'></span></span></p>
+<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr0001.github.io/images/myImage/4.png' width='' height='' title=''><span class='caption-text'></span></span></p>
 
 <p>这个就是Safari与Alocola之间的交互过程。</p>
 
@@ -77,7 +68,7 @@
 
 <p>2：打开项目，在其中的info.plist中添加如下图所示字段：</p>
 
-<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr.github.io/images/myImage/3.png' width='' height='' title=''><span class='caption-text'></span></span></p>
+<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr0001.github.io/images/myImage/3.png' width='' height='' title=''><span class='caption-text'></span></span></p>
 
 <p>其中的&#8221;lifengzhong&#8221;便是我为此应用注册的自定义协议名称，其他应用如果想调用我的应用，只要打开形似：“lifengzhong://XXX”的URL便可以了。</p>
 
@@ -110,9 +101,9 @@
   
   <entry>
     <title type="html"><![CDATA[获取当前连接的wifi名称]]></title>
-    <link href="http://wfqr.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng/"/>
     <updated>2014-04-23T11:39:22+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng</id>
+    <id>http://wfqr0001.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng</id>
     <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -166,9 +157,9 @@
   
   <entry>
     <title type="html"><![CDATA[UIWebView userAgent]]></title>
-    <link href="http://wfqr.github.io/blog/2014/04/17/uiwebview-useragent/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/04/17/uiwebview-useragent/"/>
     <updated>2014-04-17T10:28:57+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/04/17/uiwebview-useragent</id>
+    <id>http://wfqr0001.github.io/blog/2014/04/17/uiwebview-useragent</id>
     <content type="html"><![CDATA[<p>试了多种办法，只有这一种有用</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -192,9 +183,9 @@
   
   <entry>
     <title type="html"><![CDATA[辨别相片的方向]]></title>
-    <link href="http://wfqr.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang/"/>
     <updated>2014-04-08T14:33:16+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang</id>
+    <id>http://wfqr0001.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang</id>
     <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -370,9 +361,9 @@
   
   <entry>
     <title type="html"><![CDATA[看画壁,读影评]]></title>
-    <link href="http://wfqr.github.io/blog/2014/04/02/kan-hua-bi-du-ying-ping/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/04/02/kan-hua-bi-du-ying-ping/"/>
     <updated>2014-04-02T13:50:10+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/04/02/kan-hua-bi-du-ying-ping</id>
+    <id>http://wfqr0001.github.io/blog/2014/04/02/kan-hua-bi-du-ying-ping</id>
     <content type="html"><![CDATA[<pre><code>刚看完《画壁》，总有骨鲠在喉的感觉，总觉得整部片子在几个地方不清不楚，没兴趣再去看一遍，只能上网搜搜影评了。
 
 网上就一片骂声，表面的东西被一遍遍的复述着。
@@ -400,19 +391,19 @@
   
   <entry>
     <title type="html"><![CDATA[2张cos的不错的图]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/21/2zhang-cosde-bu-cuo-de-tu/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/21/2zhang-cosde-bu-cuo-de-tu/"/>
     <updated>2014-03-21T09:03:53+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/21/2zhang-cosde-bu-cuo-de-tu</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/21/2zhang-cosde-bu-cuo-de-tu</id>
     <content type="html"><![CDATA[<p>昨天看到的，特别是第一张 暁美 ほむら</p>
 
-<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr.github.io/images/myImage/1.jpg' width='' height='' title=''><span class='caption-text'></span></span></p>
+<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr0001.github.io/images/myImage/1.jpg' width='' height='' title=''><span class='caption-text'></span></span></p>
 
 <!--more-->
 
 
 <p>第二张 赵灵儿</p>
 
-<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr.github.io/images/myImage/2.jpg' width='' height='' title=''><span class='caption-text'></span></span></p>
+<p><span class='caption-wrapper left'><img class='caption' src='http://wfqr0001.github.io/images/myImage/2.jpg' width='' height='' title=''><span class='caption-text'></span></span></p>
 
 <p>非常有赶脚啊</p>
 ]]></content>
@@ -420,9 +411,9 @@
   
   <entry>
     <title type="html"><![CDATA[299美元企业账号，应用在服务器端的部署]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/18/99qi-ye-shan-hao-ying-yong-zai-fu-wu-qi-duan-de-bu-shu/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/18/99qi-ye-shan-hao-ying-yong-zai-fu-wu-qi-duan-de-bu-shu/"/>
     <updated>2014-03-18T15:13:10+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/18/99qi-ye-shan-hao-ying-yong-zai-fu-wu-qi-duan-de-bu-shu</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/18/99qi-ye-shan-hao-ying-yong-zai-fu-wu-qi-duan-de-bu-shu</id>
     <content type="html"><![CDATA[<p>一共上四个文件</p>
 
 <p>test.html //客户访问用</p>
@@ -574,9 +565,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于octopress中《!-more-》无效]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa/"/>
     <updated>2014-03-17T08:49:59+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa</id>
     <content type="html"><![CDATA[<p>加&lt;!&ndash; more &ndash;>，一点反应没有。这问题困扰了我2天，各种没用，各种没解决办法，各种人在网上问但没有人回答。</p>
 
 <p>从表相来看，就是这个标识符根本没被认出来，直接就显示在了页面了。</p>
@@ -591,9 +582,9 @@
   
   <entry>
     <title type="html"><![CDATA[IOS里BOOL和bool]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/14/iosli-boolhe-bool/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/14/iosli-boolhe-bool/"/>
     <updated>2014-03-14T15:17:23+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/14/iosli-boolhe-bool</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/14/iosli-boolhe-bool</id>
     <content type="html"><![CDATA[<p>今天坛子里有筒子鄙视了一下 if (bSign == YES)的写法，在我印象里，BOOL和bool是有区别的，随后找到这篇文章：</p>
 
 <p>转自：<a href="http://blog.csdn.net/ahopedog/article/details/7390071">http://blog.csdn.net/ahopedog/article/details/7390071</a></p>
@@ -801,9 +792,9 @@ Object-C使用signed char重定义为BOOL的原因就不多研究了，可能为
   
   <entry>
     <title type="html"><![CDATA[去掉IOS ICON的高光]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/14/qu-diao-ios/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/14/qu-diao-ios/"/>
     <updated>2014-03-14T15:13:08+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/14/qu-diao-ios</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/14/qu-diao-ios</id>
     <content type="html"><![CDATA[<p>info三处：</p>
 
 <!--more-->
@@ -876,9 +867,9 @@ Object-C使用signed char重定义为BOOL的原因就不多研究了，可能为
   
   <entry>
     <title type="html"><![CDATA[修改UIWebView的UserAgent]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/14/xiu-gai-uiwebviewde-useragent/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/14/xiu-gai-uiwebviewde-useragent/"/>
     <updated>2014-03-14T14:54:33+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/14/xiu-gai-uiwebviewde-useragent</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/14/xiu-gai-uiwebviewde-useragent</id>
     <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -896,9 +887,9 @@ Object-C使用signed char重定义为BOOL的原因就不多研究了，可能为
   
   <entry>
     <title type="html"><![CDATA[2014信息中心规划]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/14/2014xin-xi-zhong-xin/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/14/2014xin-xi-zhong-xin/"/>
     <updated>2014-03-14T10:53:37+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/14/2014xin-xi-zhong-xin</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/14/2014xin-xi-zhong-xin</id>
     <content type="html"><![CDATA[<p>  刚开完会，信息中心老大说了一下2014年中心的规划。</p>
 
 <p>  唉，对比文思海辉。。。。。。。，藏着，掖着，就怕员工知道，员工们都在雾里行走，走一步看一步，没有光明，没有未来。</p>
@@ -916,30 +907,23 @@ Object-C使用signed char重定义为BOOL的原因就不多研究了，可能为
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/11/hello/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/11/hello/"/>
     <updated>2014-03-11T17:17:27+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/11/hello</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/11/hello</id>
     <content type="html"><![CDATA[<p>本来这是第一篇BLOG，就像&#8221;hello world&#8221;一样。搞叉了，算了，就第二篇吧.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[IOS常用三个网站]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/11/ioschang-yong-san-ge-wang-zhan/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/11/ioschang-yong-san-ge-wang-zhan/"/>
     <updated>2014-03-11T16:23:36+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/11/ioschang-yong-san-ge-wang-zhan</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/11/ioschang-yong-san-ge-wang-zhan</id>
     <content type="html"><![CDATA[<p>国内不错的代码站点  <a href="http://www.code4app.com/">http://www.code4app.com/</a></p>
 
 <p>国外的 <a href="https://www.cocoacontrols.com/">https://www.cocoacontrols.com/</a></p>
 
 <p>国内不错的论坛  <a href="http://bbs.cocoachina.com/">http://bbs.cocoachina.com/</a></p>
-=======
-    <title type="html"><![CDATA[金鹰第四天]]></title>
-    <link href="http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian/"/>
-    <updated>2014-03-06T10:09:02+08:00</updated>
-    <id>http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian</id>
-    <content type="html"><![CDATA[<p>来金鹰第四天，感觉一天天变好</p>
->>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef
 ]]></content>
   </entry>
   

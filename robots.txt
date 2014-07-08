@@ -1,8 +1,2 @@
 User-agent: *
-<<<<<<< HEAD
 Disallow: 
-=======
-Disallow: 
-
-Sitemap: http://wfqr0001.github.io/sitemap.xml 
->>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef

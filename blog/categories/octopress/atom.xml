@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: octopress | 笑笑她爹的旮旯]]></title>
-  <link href="http://wfqr.github.io/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://wfqr.github.io/"/>
-  <updated>2014-07-08T08:14:24+08:00</updated>
-  <id>http://wfqr.github.io/</id>
+  <link href="http://wfqr0001.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://wfqr0001.github.io/"/>
+  <updated>2014-07-08T09:17:44+08:00</updated>
+  <id>http://wfqr0001.github.io/</id>
   <author>
     <name><![CDATA[笑笑她爹]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于octopress中《!-more-》无效]]></title>
-    <link href="http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa/"/>
+    <link href="http://wfqr0001.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa/"/>
     <updated>2014-03-17T08:49:59+08:00</updated>
-    <id>http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa</id>
+    <id>http://wfqr0001.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa</id>
     <content type="html"><![CDATA[<p>加&lt;!&ndash; more &ndash;>，一点反应没有。这问题困扰了我2天，各种没用，各种没解决办法，各种人在网上问但没有人回答。</p>
 
 <p>从表相来看，就是这个标识符根本没被认出来，直接就显示在了页面了。</p>
