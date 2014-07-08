@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+<<<<<<< HEAD
         <loc>http://wfqr.github.io/blog/2014/03/11/ioschang-yong-san-ge-wang-zhan/</loc>
         <lastmod>2014-03-21T09:18:48+08:00</lastmod>
     </url>
@@ -87,5 +88,21 @@
     <url>
         <loc>http://wfqr.github.io/robots.txt</loc>
         <lastmod>2014-04-17T13:49:31+08:00</lastmod>
+=======
+        <loc>http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian/</loc>
+        <lastmod>2014-03-06T11:08:02+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wfqr0001.github.io/blog/archives/</loc>
+        <lastmod>2014-03-06T11:08:02+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wfqr0001.github.io/</loc>
+        <lastmod>2014-03-06T11:08:02+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wfqr0001.github.io/robots.txt</loc>
+        <lastmod>2014-03-06T11:08:02+08:00</lastmod>
+>>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef
     </url>
 </urlset>

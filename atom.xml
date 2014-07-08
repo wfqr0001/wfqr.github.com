@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
+<<<<<<< HEAD
   <title><![CDATA[笑笑她爹的旮旯]]></title>
   <link href="http://wfqr.github.io/atom.xml" rel="self"/>
   <link href="http://wfqr.github.io/"/>
   <updated>2014-07-08T08:14:24+08:00</updated>
   <id>http://wfqr.github.io/</id>
+=======
+  <title><![CDATA[笑笑她爹的地盘]]></title>
+  <link href="http://wfqr0001.github.io/atom.xml" rel="self"/>
+  <link href="http://wfqr0001.github.io/"/>
+  <updated>2014-03-06T11:08:14+08:00</updated>
+  <id>http://wfqr0001.github.io/</id>
+>>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef
   <author>
     <name><![CDATA[笑笑她爹]]></name>
     
@@ -14,6 +22,7 @@
 
   
   <entry>
+<<<<<<< HEAD
     <title type="html"><![CDATA[UIWebView 禁用长按]]></title>
     <link href="http://wfqr.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an/"/>
     <updated>2014-07-07T13:33:01+08:00</updated>
@@ -924,6 +933,13 @@ Object-C使用signed char重定义为BOOL的原因就不多研究了，可能为
 <p>国外的 <a href="https://www.cocoacontrols.com/">https://www.cocoacontrols.com/</a></p>
 
 <p>国内不错的论坛  <a href="http://bbs.cocoachina.com/">http://bbs.cocoachina.com/</a></p>
+=======
+    <title type="html"><![CDATA[金鹰第四天]]></title>
+    <link href="http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian/"/>
+    <updated>2014-03-06T10:09:02+08:00</updated>
+    <id>http://wfqr0001.github.io/blog/2014/03/06/jin-ying-di-si-tian</id>
+    <content type="html"><![CDATA[<p>来金鹰第四天，感觉一天天变好</p>
+>>>>>>> ea46b77d1b98d42f34da3f850e53d7a9db764eef
 ]]></content>
   </entry>
   
