@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: IOS | 笑笑她爹的旮旯]]></title>
+  <link href="http://wfqr.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://wfqr.github.io/"/>
+  <updated>2014-07-08T08:14:24+08:00</updated>
+  <id>http://wfqr.github.io/</id>
+  <author>
+    <name><![CDATA[笑笑她爹]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UIWebView 禁用长按]]></title>
+    <link href="http://wfqr.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an/"/>
+    <updated>2014-07-07T13:33:01+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an</id>
+    <content type="html"><![CDATA[<p>在webViewDidFinishLoad:方法中添加以下代码</p>
+
+<ul>
+<li><p>(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+ // 禁用用户选择
+ [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitUserSelect=&lsquo;none&rsquo;;&rdquo;];</p>
+
+<p> // 禁用长按弹出框
+ [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitTouchCallout=&lsquo;none&rsquo;;&rdquo;];
+}</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[app通信]]></title>
+    <link href="http://wfqr.github.io/blog/2014/05/19/apptong-xin/"/>
+    <updated>2014-05-19T15:00:35+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/05/19/apptong-xin</id>
+    <content type="html"><![CDATA[<p>[转]
+受限与iOS系统的运行机制，绝大多数情况下一个应用在进入后台后会马上进入suspend或terminate状态，也就是说不能执行代码，iOS中也没有类似WIndows中Service的概念，但存在某些例外：
+1：有某些重要的任务，例如保存用户数据，网络下载等，可以申请一段时间的background运行时间，但时间段内能进行的操作比较有限，且有时间限制，长度为600秒左右。
+2：某些特定类型的应用，具体包括：</p>
+
+<p>VoIP应用  <br/>
+定位类应用  <br/>
+新闻类应用  <br/>
+音乐类应用</p>
+
+<p>这些类型的应用可以获得没有时间限制的background运行。但并不是你随便声明一下应用类型就可以了，如果挂羊头卖狗肉，是无法通过App Store审核的。</p>
+
+<p>既然大多数情况下系统中只有一个活动的应用在运行，加上iOS内不同应用由于沙箱运行导致的高度隔离，我们熟悉的那些IPC方法，例如管道、邮槽、共享内存、Socket等，往往会显得比较无力了，针对此种情况，苹果也提供了对应的解决方案，也就是我们今天将要介绍的：URL Schema</p>
+
+<p>简单来说，URL Schema就是iOS内的应用调用协议，应用A可以声明自定义的调用协议，就如http/https那样，当另一个应用B打算在应用内打开应用A时，可以打开使用A自定义的协议开头的URL来打开A，除了协议头，URL中还可以附加其他参数，具体过程参见下图：</p>
+
+<!--more-->
+
+
+<p><span class='caption-wrapper left'><img class='caption' src='/images/myImage/4.png' width='' height='' title=''><span class='caption-text'></span></span></p>
+
+<p>这个就是Safari与Alocola之间的交互过程。</p>
+
+<p>接下来介绍一下自定义URL Schema的过程。</p>
+
+<p>1：创建Xcode项目</p>
+
+<p>2：打开项目，在其中的info.plist中添加如下图所示字段：</p>
+
+<p><span class='caption-wrapper left'><img class='caption' src='/images/myImage/3.png' width='' height='' title=''><span class='caption-text'></span></span></p>
+
+<p>其中的"lifengzhong"便是我为此应用注册的自定义协议名称，其他应用如果想调用我的应用，只要打开形似：“lifengzhong://XXX”的URL便可以了。</p>
+
+<p>3：在项目AppDelegate中添加函数：</p>
+
+<ul>
+<li>(BOOL)application:(UIApplication <em>)application openURL:(NSURL </em>)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+  if ([sourceApplication isEqualToString: @&ldquo;xxx.xxx.xxx&rdquo;]) {
+      //xx
+  }
+  return YES;
+}</li>
+</ul>
+
+
+<p>此函数便是URL Call的处理函数了，每当其他应用通过URL打开此应用时，该函数都会被调用。
+参数url是传进的url，sourceApplication是呼叫应用的bundle identifier，通过此参数，应用可以对呼叫的应用进行过滤。annotation是呼叫过程中可以附加的额外参数，这里没有用到。</p>
+
+<p>4：当另一个应用想调用我的应用时，只需拼接好URL，，然后打开URL即可，十分方便：</p>
+
+<p>NSURL* url = [NSURL URLWithString: @&ldquo;lifengzhong://1,545166&rdquo;];
+[[UIApplication sharedApplication] openURL: url];</p>
+
+<p>这里的1,545166是我自定义的参数，你可以根据自己需要定义URL的格式。</p>
+
+<p>通过上面介绍的URL Schema方法，算是实现了某种程度的进程间通信，但这种方式的一个缺点是，同一时刻还是只能有一个进程在前台，主动呼叫的应用在调用成功后必须进入后台，所以能传递的只有URL中所带的参数或annotation中所带的参数。调用的过程中会出现应用之间的切换，用户体验不好。但聊胜于无，苹果好歹还是留了这么一个口子，感恩吧。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[获取当前连接的wifi名称]]></title>
+    <link href="http://wfqr.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng/"/>
+    <updated>2014-04-23T11:39:22+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/04/23/huo-qu-dang-qian-lian-jie-de-wifiming-cheng</id>
+    <content type="html"><![CDATA[<p>```objc</p>
+
+<h1>import &lt;SystemConfiguration/CaptiveNetwork.h></h1>
+
+<pre><code>    NSString *wifiName = @"Not Found";
+
+    CFArrayRef myArray = CNCopySupportedInterfaces();
+
+    if (myArray != nil) {
+
+        CFDictionaryRef myDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(myArray, 0));
+
+        if (myDict != nil) {
+
+            NSDictionary *dict = (NSDictionary*)CFBridgingRelease(myDict);
+
+
+
+            wifiName = [dict valueForKey:@"SSID"];
+
+        }
+
+    }
+
+    NSLog(@"wifiName:%@", wifiName);
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UIWebView userAgent]]></title>
+    <link href="http://wfqr.github.io/blog/2014/04/17/uiwebview-useragent/"/>
+    <updated>2014-04-17T10:28:57+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/04/17/uiwebview-useragent</id>
+    <content type="html"><![CDATA[<p>试了多种办法，只有这一种有用</p>
+
+<p>```objc
+NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:@&ldquo;Mozilla/5.0 (iPhone; U; CPU OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/4.0 Mobile/8C148 Safari/528.16&rdquo;, @&ldquo;UserAgent&rdquo;, nil];</p>
+
+<p>[[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
+[dictionnary release];
+```</p>
+
+<p>但这个方法有弊端：</p>
+
+<p>1.没法知道当前userAgent是什么，一开始你不设置的时候，是没有这个值的，推断UIWebView临时取了默认值，或者按照当前的环境实时取了值。</p>
+
+<p>2.只能修改一次，我去，真的只能一次。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[辨别相片的方向]]></title>
+    <link href="http://wfqr.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang/"/>
+    <updated>2014-04-08T14:33:16+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/04/08/bian-bie-xiang-pian-de-fang-xiang</id>
+    <content type="html"><![CDATA[<p>```objc
+@interface UIImage (fixOrientation)</p>
+
+<ul>
+<li>(UIImage *)fixOrientation;</li>
+</ul>
+
+
+<p>@end</p>
+
+<p>```</p>
+
+<!--more-->
+
+
+<p>```objc
+@implementation UIImage (fixOrientation)</p>
+
+<ul>
+<li><p>(UIImage *)fixOrientation {</p>
+
+<p>  // No-op if the orientation is already correct
+  if (self.imageOrientation == UIImageOrientationUp) return self;</p>
+
+<p>  // We need to calculate the proper transformation to make the image upright.
+  // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+  CGAffineTransform transform = CGAffineTransformIdentity;</p>
+
+<p>  switch (self.imageOrientation) {
+      case UIImageOrientationDown:
+      case UIImageOrientationDownMirrored:
+          transform = CGAffineTransformTranslate(transform, self.size.width, self.size.height);
+          transform = CGAffineTransformRotate(transform, M_PI);
+          break;</p>
+
+<pre><code>  case UIImageOrientationLeft:
+  case UIImageOrientationLeftMirrored:
+      transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+      transform = CGAffineTransformRotate(transform, M_PI_2);
+      break;
+
+  case UIImageOrientationRight:
+  case UIImageOrientationRightMirrored:
+      transform = CGAffineTransformTranslate(transform, 0, self.size.height);
+      transform = CGAffineTransformRotate(transform, -M_PI_2);
+      break;
+</code></pre>
+
+<p>  }</p>
+
+<p>  switch (self.imageOrientation) {
+      case UIImageOrientationUpMirrored:
+      case UIImageOrientationDownMirrored:
+          transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+          transform = CGAffineTransformScale(transform, -1, 1);
+          break;</p>
+
+<pre><code>  case UIImageOrientationLeftMirrored:
+  case UIImageOrientationRightMirrored:
+      transform = CGAffineTransformTranslate(transform, self.size.height, 0);
+      transform = CGAffineTransformScale(transform, -1, 1);
+      break;
+</code></pre>
+
+<p>  }</p>
+
+<p>  // Now we draw the underlying CGImage into a new context, applying the transform
+  // calculated above.
+  CGContextRef ctx = CGBitmapContextCreate(NULL, self.size.width, self.size.height,
+                                           CGImageGetBitsPerComponent(self.CGImage), 0,
+                                           CGImageGetColorSpace(self.CGImage),
+                                           CGImageGetBitmapInfo(self.CGImage));
+  CGContextConcatCTM(ctx, transform);
+  switch (self.imageOrientation) {
+      case UIImageOrientationLeft:
+      case UIImageOrientationLeftMirrored:
+      case UIImageOrientationRight:
+      case UIImageOrientationRightMirrored:
+          // Grr&hellip;
+          CGContextDrawImage(ctx, CGRectMake(0,0,self.size.height,self.size.width), self.CGImage);
+          break;</p>
+
+<pre><code>  default:
+      CGContextDrawImage(ctx, CGRectMake(0,0,self.size.width,self.size.height), self.CGImage);
+      break;
+</code></pre>
+
+<p>  }</p>
+
+<p>  // And now we just create a new UIImage from the drawing context
+  CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+  UIImage *img = [UIImage imageWithCGImage:cgimg];
+  CGContextRelease(ctx);
+  CGImageRelease(cgimg);
+  return img;
+}</p></li>
+</ul>
+
+
+<p>@end
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

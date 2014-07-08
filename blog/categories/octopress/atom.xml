@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | 笑笑她爹的旮旯]]></title>
+  <link href="http://wfqr.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://wfqr.github.io/"/>
+  <updated>2014-07-08T08:14:24+08:00</updated>
+  <id>http://wfqr.github.io/</id>
+  <author>
+    <name><![CDATA[笑笑她爹]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[关于octopress中《!-more-》无效]]></title>
+    <link href="http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa/"/>
+    <updated>2014-03-17T08:49:59+08:00</updated>
+    <id>http://wfqr.github.io/blog/2014/03/17/guan-yu-octopresszhong-morede-yong-fa</id>
+    <content type="html"><![CDATA[<p>加&lt;!&ndash; more &ndash;>，一点反应没有。这问题困扰了我2天，各种没用，各种没解决办法，各种人在网上问但没有人回答。</p>
+
+<p>从表相来看，就是这个标识符根本没被认出来，直接就显示在了页面了。</p>
+
+<p>一开始是复制的网上&lt;!&ndash; more &ndash;>，（尼玛，后来才知道被骗了）。</p>
+
+<p>今天早上不死心，又搜了搜，搜了一位前辈的BLOG（<a href="http://www.dyfeng.org">http://www.dyfeng.org</a>) 他页面上的Read on->很完美，就想着要去他的github，看看这些文章的原码。哎，页面有CSS的菜单，点进去看了一下，是页面的原码，大喜。。。。。。，看到more，我的泪默默地流了下来，坑爹啊这是，原来是&lt;!-more->，左右各两条横线。</p>
+
+<p>一改就好，闭。</p>
+]]></content>
+  </entry>
+  
+</feed>
