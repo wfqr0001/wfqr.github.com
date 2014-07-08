@@ -12,8 +12,16 @@
     <title>UIWebView 禁用长按 - 笑笑她爹的旮旯</title>
     <meta name="author" content="笑笑她爹">
     
-    <meta name="description" content="UIWebView 禁用长按 Jul 7th, 2014 IOS 在webViewDidFinishLoad:方法中添加以下代码 (void)webViewDidFinishLoad:(UIWebView *)webView
-{ // 禁用用户选择 [webView &hellip;">
+    <meta name="description" content="UIWebView 禁用长按 Jul 7th, 2014 IOS 在webViewDidFinishLoad:方法中添加以下代码 1
+2
+3
+4
+5
+6
+7
+8
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{ // 禁用用户选择 [ &hellip;">
     <meta name="keywords" content="IOS">
     <meta name="viewport" content="width=device-width">
     <link rel="canonical" href="http://wfqr0001.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an">
@@ -102,16 +110,23 @@
 
   <p>在webViewDidFinishLoad:方法中添加以下代码</p>
 
-<ul>
-<li><p>(void)webViewDidFinishLoad:(UIWebView *)webView
-{
- // 禁用用户选择
- [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitUserSelect=&lsquo;none&rsquo;;&rdquo;];</p>
-
-<p> // 禁用长按弹出框
- [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitTouchCallout=&lsquo;none&rsquo;;&rdquo;];
-}</p></li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">webViewDidFinishLoad:</span><span class="p">(</span><span class="n">UIWebView</span> <span class="o">*</span><span class="p">)</span><span class="nv">webView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>   <span class="c1">// 禁用用户选择</span>
+</span><span class='line'>   <span class="p">[</span><span class="n">webView</span> <span class="nl">stringByEvaluatingJavaScriptFromString:</span><span class="s">@&quot;document.documentElement.style.webkitUserSelect=&#39;none&#39;;&quot;</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="c1">// 禁用长按弹出框</span>
+</span><span class='line'>   <span class="p">[</span><span class="n">webView</span> <span class="nl">stringByEvaluatingJavaScriptFromString:</span><span class="s">@&quot;document.documentElement.style.webkitTouchCallout=&#39;none&#39;;&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 

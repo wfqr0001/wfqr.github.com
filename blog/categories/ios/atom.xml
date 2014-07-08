@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IOS | 笑笑她爹的旮旯]]></title>
   <link href="http://wfqr0001.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://wfqr0001.github.io/"/>
-  <updated>2014-07-08T09:31:17+08:00</updated>
+  <updated>2014-07-08T09:34:44+08:00</updated>
   <id>http://wfqr0001.github.io/</id>
   <author>
     <name><![CDATA[笑笑她爹]]></name>
@@ -18,19 +18,17 @@
     <link href="http://wfqr0001.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an/"/>
     <updated>2014-07-07T13:33:01+08:00</updated>
     <id>http://wfqr0001.github.io/blog/2014/07/07/uiwebview-jin-yong-chang-an</id>
-    <content type="html"><![CDATA[<p>在webViewDidFinishLoad:方法中添加以下代码</p>
-
-<ul>
-<li><p>(void)webViewDidFinishLoad:(UIWebView *)webView
+    <content type="html"><![CDATA[<p>在webViewDidFinishLoad:方法中添加以下代码
+```objc
+&ndash; (void)webViewDidFinishLoad:(UIWebView *)webView
 {
- // 禁用用户选择
- [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitUserSelect=&lsquo;none&rsquo;;&rdquo;];</p>
+   // 禁用用户选择
+   [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitUserSelect=&lsquo;none&rsquo;;&rdquo;];</p>
 
-<p> // 禁用长按弹出框
- [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitTouchCallout=&lsquo;none&rsquo;;&rdquo;];
-}</p></li>
-</ul>
-
+<p>   // 禁用长按弹出框
+   [webView stringByEvaluatingJavaScriptFromString:@&ldquo;document.documentElement.style.webkitTouchCallout=&lsquo;none&rsquo;;&rdquo;];
+}
+```</p>
 ]]></content>
   </entry>
   
